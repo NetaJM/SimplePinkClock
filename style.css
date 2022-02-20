@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Serif', serif;
+}
+
+.container {
+  background: url(222.jpeg);
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  width: 90rem;
+  height: 90rem;
+  background-color: rgba(236, 56, 125, 0.5);
+  border-radius: 50%;
+  border: 0.5rem solid rgba(110, 66, 73, 0.3);
+  position: relative;
+}
+
+.numbers {
+  width: inherit;
+  height: inherit;
+  position: relative;
+}
+
+.numbers div {
+  position: absolute;
+  font-size: 6rem;
+  color: rgba(236, 56, 125, 0.5);
+  text-shadow: 0.2rem 0.2rem 0.2rem #222;
+}
+
+.twelve {
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.three {
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.six {
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nine {
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrows {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrows::before {
+  content: '';
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(68, 4, 47, 0.5);
+  border-radius: 50%;
+  /*putting the arrows behind the circle */
+  z-index: 10; 
+}
+
+.arrows div {
+  width: 1.1rem;
+  height: 25rem;
+  background-color: rgba(68, 4, 47, 0.5);
+  position: absolute;
+  bottom: 50%;
+  /* box-shadow: 0.2rem 0.2rem 0.5rem #777; */
+  border-radius: 100% 100% 0 0;
+  transform-origin: bottom center;
+}
+
+.arrows .hour {
+  height: 15rem;
+  transform: rotate(90deg);
+}
+
+.arrows .second {
+  height: 20rem;
+  background-color: rgba(99, 18, 88, 0.7);
+  transform: rotate(270deg);
+}  
