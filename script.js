@@ -11,6 +11,8 @@ function setDate() {
 const getSecond = currTime.getSeconds();
 const getMinute = currTime.getMinutes();
 const getHour = currTime.getHours();
+  
+  console.log(currTime);
 
 // converting the times into degrees for the portion of the movements of each arrow 
 const secondsInDegrees = (getSecond / 60) * 360;
